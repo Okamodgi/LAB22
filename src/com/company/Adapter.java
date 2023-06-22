@@ -1,8 +1,16 @@
 package com.company;
 
-public class Adapter{
+public class Adapter implements Charger{
+    Voltage voltage;
 
-    public void charger(){
-        System.out.println("Зарядное устройство подключено к напряжению 220V");
+    public Adapter(Voltage voltage) {
+        this.voltage = voltage;
+    }
+
+    @Override
+    public void charger(PhoneCharger phoneCharger) {
+        voltage.connect();
+        System.out.println("Напряжение в 380V преобразуется в 220V");
+        phoneCharger.charger();
     }
 }

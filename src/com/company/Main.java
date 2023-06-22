@@ -1,9 +1,12 @@
+package com.company;
 
 public class Main {
-    public void main(String[] args) {
+
+    public static void main(String[] args) {
         Voltage voltage = new Voltage();
         PhoneCharger phoneCharger = new PhoneCharger();
-        Charger adapter = new Adapter(voltage);
+        com.company.Charger adapter = new com.company.Adapter(voltage);
+
         adapter.charger(phoneCharger);
     }
 }
